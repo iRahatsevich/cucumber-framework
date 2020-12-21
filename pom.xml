@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- pom.xml is the main driver() of maven projects
+ here we configure our project name, our project version
+ which dependencies (libraries) we want to import to our project
+  -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.devxschool</groupId>
+    <artifactId>cucumber_summer2020</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <!-- maven uses jdk 6 by default which doesnt support newly added features
+         like override interface methods , lambda. so we are changing jdk to 1.8-->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope> <!-- make this library available only in test src folder -->
+        </dependency>
+
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.141.59</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>3.8.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.13.2</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+
+
+
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-core</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.14.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.14.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+
+    </dependencies>
+        <!--default plugins
+        what are plugins?
+        plugins are libraries similar to dependencies
+        difference is dependencies are used by programmers to code by using exisiting functionalities coming from outisde libraries
+        plugins on other hand dont require extra coding these are features that get executed and performed while building the project in
+        mvn phases like test, package etc.
+        by default maven has surefire plugin which scans all classes in test src folder which end with Test word.
+        and if those classes have @Test annotations maven will run them and if all tests pass then maven
+        will allow you to create a jar file otherwise it wont.
+     -->
+
+        <!-- build tag is used for project building configurations and plugins -->
+
+
+    <profiles>
+        <profile>
+            <id>regression</id>
+            <activation>
+            <activeByDefault>false</activeByDefault>
+            </activation>
+
+            <build> <!-- everything under this build runs as default profile -->
+                <plugins>
+                    <!-- surefire plugin is used for running all tests (under test folder) within the project while building the project(mvn clean install) in test phase -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.21.0</version>
+                        <configuration>
+                            <!-- which test classes do you want to include in the surefire plugin run in test phase -->
+                            <includes>
+                                <!-- ** means anywhere under project directory -->
+                                <include>**/RegressionRunner.java</include>
+                            </includes>
+                            <testFailureIgnore>true</testFailureIgnore> <!-- will build successfully and ingnore failing test -->
+                        </configuration>
+                    </plugin>
+
+
+                    <!-- cucumber reporting plugin which will generate nice reporting -->
+                    <plugin>
+                        <groupId>net.masterthought</groupId>
+                        <artifactId>maven-cucumber-reporting</artifactId>
+                        <version>2.8.0</version>
+                        <!-- how should this plugin be executed -->
+                        <executions>
+                            <execution>
+                                <id>execution</id>
+                                <!--which phase this plugin should be executed-->
+                                <phase>verify</phase>
+
+                                <goals>
+                                    <goal>generate</goal>
+                                </goals>
+                                <!-- here give configuration for the reporting like name , where plugin should find where plugin should find cucumber. json-->
+                                <!-- here give configuration for the report like name, where the plugin should find cucumber.json(from runner class)
+                                 and where the final nice report should be created(generated)? -->
+                                <configuration>
+                                    <!-- what ever we put here will appear in the report -->
+                                    <projectName>Bank Regression Test</projectName>
+                                    <!-- where nice reports should be generated in ?-->
+                                    <!-- ${project.build.directory} means target folder -->
+                                    <outputDirectory>${project.build.directory}/cucumber-report-pie-chart
+                                    </outputDirectory>
+                                    <!-- which cucumber junit statistics from runner class should i use? -->
+                                    <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+
+                </plugins>
+
+
+            </build>
+        </profile>
+
+
+        <profile>
+            <id>smoke</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+
+            <build> <!-- everything under this build runs as default profile -->
+                <plugins>
+                    <!-- surefire plugin is used for running all tests (under test folder) within the project while building the project(mvn clean install) in test phase
+                    we need this plugin to run our test through terminal (and it will generate a report)-->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.21.0</version>
+                        <configuration>
+                            <includes>
+                                <!-- ** means anywhere under project directory -->
+                                <include>**/SmokeRunner.java</include>
+                            </includes>
+                            <testFailureIgnore>true</testFailureIgnore> <!-- will build successfully and ingnore failing test -->
+                        </configuration>
+
+                    </plugin>
+                    <!-- cucumber reporting plugin which will generate nice reporting -->
+                    <plugin>
+                        <groupId>net.masterthought</groupId>
+                        <artifactId>maven-cucumber-reporting</artifactId>
+                        <version>2.8.0</version>
+                        <!-- how should this plugin be executed -->
+                        <executions>
+                            <execution>
+                                <id>execution</id>
+                                <!--which phase this plugin should be executed-->
+                                <phase>verify</phase>
+
+                                <goals>
+                                    <goal>generate</goal>
+                                </goals>
+                                <!-- here give configuration for the reporting like name , where plugin should find where plugin should find cucumber. json-->
+                                <configuration>
+                                    <!-- what ever we put here will appear in the report -->
+                                    <projectName>Bank Smoke Test</projectName>
+                                    <!-- where nice reports should be generated in ?-->
+                                    <!-- ${project.build.directory} means target folder -->
+                                    <outputDirectory>${project.build.directory}/cucumber-report-pie-chart
+                                    </outputDirectory>
+                                    <!-- which cucumber junit statistics from runner class should i use? -->
+                                    <cucumberOutput>${project.build.directory}/cucumber.json
+
+                                    </cucumberOutput>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+
+                </plugins>
+
+
+            </build>
+        </profile>
+
+
+    </profiles>
+
+</project>
+
+<!--how to run regression on terminal ? -> mvn clean install -Pregression
+how to run smoke test on the terminal ? -> mvn clean install -Psmoke
+
+-->
+
+
+        <!-- xml language  -->
+        <!--
+         <opening tag> values </closing tag>
+         <opening tag atributeName=atributeValue>
+
+
+
+          -->
+
+
+<!--
+ to generate pie chart : clean and install in maven
+ -->

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="runners.SmokeRunner" time="0.998" tests="154" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="14"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\irene\IdeaProjects\cucumber_summer2020\target\test-classes;C:\Users\irene\IdeaProjects\cucumber_summer2020\target\classes;C:\Users\irene\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\irene\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\irene\.m2\repository\info\cukes\cucumber-java\1.2.5\cucumber-java-1.2.5.jar;C:\Users\irene\.m2\repository\info\cukes\cucumber-junit\1.2.5\cucumber-junit-1.2.5.jar;C:\Users\irene\.m2\repository\io\cucumber\cucumber-core\1.2.6\cucumber-core-1.2.6.jar;C:\Users\irene\.m2\repository\info\cukes\cucumber-html\0.2.3\cucumber-html-0.2.3.jar;C:\Users\irene\.m2\repository\info\cukes\cucumber-jvm-deps\1.0.5\cucumber-jvm-deps-1.0.5.jar;C:\Users\irene\.m2\repository\info\cukes\gherkin\2.12.2\gherkin-2.12.2.jar;C:\Users\irene\.m2\repository\com\github\javafaker\javafaker\1.0.2\javafaker-1.0.2.jar;C:\Users\irene\.m2\repository\org\apache\commons\commons-lang3\3.5\commons-lang3-3.5.jar;C:\Users\irene\.m2\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23-android.jar;C:\Users\irene\.m2\repository\com\github\mifmif\generex\1.0.2\generex-1.0.2.jar;C:\Users\irene\.m2\repository\dk\brics\automaton\automaton\1.11-8\automaton-1.11-8.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="14"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-14.0.1\bin"/>
+    <property name="sun.java.command" value="C:\Users\irene\AppData\Local\Temp\surefire11557830763786352668\surefirebooter13243954032485299686.jar C:\Users\irene\AppData\Local\Temp\surefire11557830763786352668 2020-10-30T23-03-49_526-jvmRun1 surefire5944488295123874221tmp surefire_011497732187538257486tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\irene\IdeaProjects\cucumber_summer2020\target\test-classes;C:\Users\irene\IdeaProjects\cucumber_summer2020\target\classes;C:\Users\irene\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\irene\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\irene\.m2\repository\info\cukes\cucumber-java\1.2.5\cucumber-java-1.2.5.jar;C:\Users\irene\.m2\repository\info\cukes\cucumber-junit\1.2.5\cucumber-junit-1.2.5.jar;C:\Users\irene\.m2\repository\io\cucumber\cucumber-core\1.2.6\cucumber-core-1.2.6.jar;C:\Users\irene\.m2\repository\info\cukes\cucumber-html\0.2.3\cucumber-html-0.2.3.jar;C:\Users\irene\.m2\repository\info\cukes\cucumber-jvm-deps\1.0.5\cucumber-jvm-deps-1.0.5.jar;C:\Users\irene\.m2\repository\info\cukes\gherkin\2.12.2\gherkin-2.12.2.jar;C:\Users\irene\.m2\repository\com\github\javafaker\javafaker\1.0.2\javafaker-1.0.2.jar;C:\Users\irene\.m2\repository\org\apache\commons\commons-lang3\3.5\commons-lang3-3.5.jar;C:\Users\irene\.m2\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23-android.jar;C:\Users\irene\.m2\repository\com\github\mifmif\generex\1.0.2\generex-1.0.2.jar;C:\Users\irene\.m2\repository\dk\brics\automaton\automaton\1.11-8\automaton-1.11-8.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\irene"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2020-04-14"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-14.0.1"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\irene\IdeaProjects\cucumber_summer2020"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="idea.version2020.1.2" value="true"/>
+    <property name="surefire.real.class.path" value="C:\Users\irene\AppData\Local\Temp\surefire11557830763786352668\surefirebooter13243954032485299686.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="14.0.1+7"/>
+    <property name="user.name" value="irene"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\irene\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\irene\AppData\Local\Temp\"/>
+    <property name="java.version" value="14.0.1"/>
+    <property name="user.dir" value="C:\Users\irene\IdeaProjects\cucumber_summer2020"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-14.0.1\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\irene\apache-maven-3.6.3-bin\apache-maven-3.6.3\bin;C:\Program Files\Java\jdk1.8.0_251\bin;C:\Users\irene\apache-maven-3.6.3-bin\bin;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="14.0.1+7"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="58.0"/>
+  </properties>
+  <testcase name="Given the following user account is created" classname="Scenario: Deposit within allowed limit" time="0.001"/>
+  <testcase name="Scenario: Deposit within allowed limit" classname="Scenario: Deposit within allowed limit" time="0.002"/>
+  <testcase name="Given the following user account is created" classname="Scenario: Multiple Account Deposit test" time="0"/>
+  <testcase name="When the following deposits are made" classname="Scenario: Multiple Account Deposit test" time="0"/>
+  <testcase name="Then accounts have the following balances" classname="Scenario: Multiple Account Deposit test" time="0"/>
+  <testcase name="Scenario: Multiple Account Deposit test" classname="Scenario: Multiple Account Deposit test" time="0"/>
+  <testcase name="Given the following user account is created" classname="Scenario: Multiple Account Deposit test 2" time="0"/>
+  <testcase name="When the following deposits are made" classname="Scenario: Multiple Account Deposit test 2" time="0"/>
+  <testcase name="Then accounts have the following balances" classname="Scenario: Multiple Account Deposit test 2" time="0"/>
+  <testcase name="Scenario: Multiple Account Deposit test 2" classname="Scenario: Multiple Account Deposit test 2" time="0"/>
+  <testcase name="And User account with accountNumer 234523453245 and routing number 123456789 is opened" classname="Scenario: Deposit amount within allowed range." time="0"/>
+  <testcase name="When User deposits $1000.00" classname="Scenario: Deposit amount within allowed range." time="0"/>
+  <testcase name="Then User should have $1000 in account" classname="Scenario: Deposit amount within allowed range." time="0"/>
+  <testcase name="Scenario: Deposit amount within allowed range." classname="Scenario: Deposit amount within allowed range." time="0"/>
+  <testcase name="And User account with accountNumer 234523453245 and routing number 123456789 is opened" classname="Scenario: Deposit within allowed range close to upper boundary" time="0"/>
+  <testcase name="When User deposits $9000.12" classname="Scenario: Deposit within allowed range close to upper boundary" time="0"/>
+  <testcase name="Then User should have $9000.12 in account" classname="Scenario: Deposit within allowed range close to upper boundary" time="0"/>
+  <testcase name="Scenario: Deposit within allowed range close to upper boundary" classname="Scenario: Deposit within allowed range close to upper boundary" time="0"/>
+  <testcase name="And User account with accountNumer 234523453245 and routing number 123456789 is opened" classname="Scenario: Deposit amount is negative" time="0"/>
+  <testcase name="When User deposits $-1000.40" classname="Scenario: Deposit amount is negative" time="0"/>
+  <testcase name="Then User should have $0.0 in account" classname="Scenario: Deposit amount is negative" time="0"/>
+  <testcase name="Scenario: Deposit amount is negative" classname="Scenario: Deposit amount is negative" time="0.001"/>
+  <testcase name="And User account with accountNumer 234523453245 and routing number 123456789 is opened" classname="Scenario: Deposit negative amount -1" time="0"/>
+  <testcase name="When User deposits $-1.33" classname="Scenario: Deposit negative amount -1" time="0"/>
+  <testcase name="Then User should have $0.0 in account" classname="Scenario: Deposit negative amount -1" time="0"/>
+  <testcase name="Scenario: Deposit negative amount -1" classname="Scenario: Deposit negative amount -1" time="0"/>
+  <testcase name="And User account with accountNumer 234523453245 and routing number 123456789 is opened" classname="Scenario: Deposit above the max limit" time="0"/>
+  <testcase name="When User deposits $12000.22" classname="Scenario: Deposit above the max limit" time="0"/>
+  <testcase name="Then User should have $0.0 in account" classname="Scenario: Deposit above the max limit" time="0"/>
+  <testcase name="Scenario: Deposit above the max limit" classname="Scenario: Deposit above the max limit" time="0.002"/>
+  <testcase name="And User account with accountNumer 234523453245 and routing number 123456789 is opened" classname="Scenario: Deposit 0" time="0"/>
+  <testcase name="When User deposits $0.0" classname="Scenario: Deposit 0" time="0"/>
+  <testcase name="Then User should have $0.0 in account" classname="Scenario: Deposit 0" time="0"/>
+  <testcase name="Scenario: Deposit 0" classname="Scenario: Deposit 0" time="0"/>
+  <testcase name="And User account with accountNumer 234523453245 and routing number 123456789 is opened" classname="Scenario: Deposit the max" time="0"/>
+  <testcase name="When User deposits $10000.00" classname="Scenario: Deposit the max" time="0"/>
+  <testcase name="Then User should have $10000.00 in account" classname="Scenario: Deposit the max" time="0"/>
+  <testcase name="Scenario: Deposit the max" classname="Scenario: Deposit the max" time="0"/>
+  <testcase name="And User account with accountNumer 234523453245 and routing number 123456789 is opened" classname="Scenario: Deposit multiple times within the range" time="0"/>
+  <testcase name="When User deposits $6000.33" classname="Scenario: Deposit multiple times within the range" time="0"/>
+  <testcase name="And User deposits $1000.44" classname="Scenario: Deposit multiple times within the range" time="0"/>
+  <testcase name="Then User should have $7000.77 in account" classname="Scenario: Deposit multiple times within the range" time="0"/>
+  <testcase name="Scenario: Deposit multiple times within the range" classname="Scenario: Deposit multiple times within the range" time="0.001"/>
+  <testcase name="And User account with accountNumer 234523453245 and routing number 123456789 is opened" classname="Scenario: Deposit multiple times within the range approach 2" time="0"/>
+  <testcase name="When User deposits $6000.00" classname="Scenario: Deposit multiple times within the range approach 2" time="0"/>
+  <testcase name="Then User should have $6000.00 in account" classname="Scenario: Deposit multiple times within the range approach 2" time="0"/>
+  <testcase name="When User deposits $1000.00" classname="Scenario: Deposit multiple times within the range approach 2" time="0"/>
+  <testcase name="Then User should have $7000.00 in account" classname="Scenario: Deposit multiple times within the range approach 2" time="0"/>
+  <testcase name="Scenario: Deposit multiple times within the range approach 2" classname="Scenario: Deposit multiple times within the range approach 2" time="0"/>
+  <testcase name="Given User account with accountNumber 123456789123 and routing number 123456789 is opened" classname="Scenario: Withdraw within the limit" time="0"/>
+  <testcase name="And User deposits $1000.00" classname="Scenario: Withdraw within the limit" time="0"/>
+  <testcase name="When User withdraws $1000.00" classname="Scenario: Withdraw within the limit" time="0"/>
+  <testcase name="Then User should have $0.0 in account" classname="Scenario: Withdraw within the limit" time="0"/>
+  <testcase name="Scenario: Withdraw within the limit" classname="Scenario: Withdraw within the limit" time="0"/>
+  <testcase name="Given User account with accountNumber 123456789123 and routing number 123456789 is opened" classname="Scenario: Withdraw over the limit" time="0"/>
+  <testcase name="And User deposits $1000.00" classname="Scenario: Withdraw over the limit" time="0"/>
+  <testcase name="When User withdraws $1500.00" classname="Scenario: Withdraw over the limit" time="0"/>
+  <testcase name="Then User should have $1000.0 in account" classname="Scenario: Withdraw over the limit" time="0"/>
+  <testcase name="Scenario: Withdraw over the limit" classname="Scenario: Withdraw over the limit" time="0"/>
+  <testcase name="Given User account with accountNumber 123456789123 and routing number 123456789 is opened" classname="Scenario: Withdraw with insufficient funds balance" time="0"/>
+  <testcase name="When User withdraws $10.00" classname="Scenario: Withdraw with insufficient funds balance" time="0"/>
+  <testcase name="Then User should have $0.0 in account" classname="Scenario: Withdraw with insufficient funds balance" time="0"/>
+  <testcase name="Scenario: Withdraw with insufficient funds balance" classname="Scenario: Withdraw with insufficient funds balance" time="0.001"/>
+  <testcase name="Given User account with accountNumber 123456789123 and routing number 123456789 is opened" classname="Scenario: Withdraw with 0 balance" time="0"/>
+  <testcase name="And User deposits $-1000.00" classname="Scenario: Withdraw with 0 balance" time="0"/>
+  <testcase name="When User withdraws $10.00" classname="Scenario: Withdraw with 0 balance" time="0"/>
+  <testcase name="Then User should have $0.0 in account" classname="Scenario: Withdraw with 0 balance" time="0"/>
+  <testcase name="Scenario: Withdraw with 0 balance" classname="Scenario: Withdraw with 0 balance" time="0.001"/>
+  <testcase name="Given User is logged in to chase account(Scenario: we give a scenario name" classname="Deposit within allowed range)" time="0"/>
+  <testcase name="When User deposits $1000 to John Doe(Scenario: we give a scenario name" classname="Deposit within allowed range)" time="0"/>
+  <testcase name="Then John Doe should have 1000 deposited(Scenario: we give a scenario name" classname="Deposit within allowed range)" time="0"/>
+  <testcase name="Scenario: we give a scenario name" classname="Deposit within allowed range" time="0.001"/>
+  <testcase name="Given User is logged in to chase account" classname="Scenario: Deposit above threshold limit" time="0"/>
+  <testcase name="When User deposits $1000000 to John Doe" classname="Scenario: Deposit above threshold limit" time="0"/>
+  <testcase name="Then John Doe should not have 100000 deposited" classname="Scenario: Deposit above threshold limit" time="0"/>
+  <testcase name="Scenario: Deposit above threshold limit" classname="Scenario: Deposit above threshold limit" time="0"/>
+  <testcase name="Given User is logged in to chase account" classname="Scenario: Deposit negative value" time="0"/>
+  <testcase name="And User has 300 in the account" classname="Scenario: Deposit negative value" time="0"/>
+  <testcase name="When User deposits -10 to John Doe" classname="Scenario: Deposit negative value" time="0"/>
+  <testcase name="Then User should have 300" classname="Scenario: Deposit negative value" time="0"/>
+  <testcase name="And John Doe Should not any deposits" classname="Scenario: Deposit negative value" time="0"/>
+  <testcase name="Scenario: Deposit negative value" classname="Scenario: Deposit negative value" time="0.001"/>
+  <testcase name="Given User navigate to Digital Bank application login page" classname="Scenario: As a user, I want to login to Bank application successfully" time="0"/>
+  <testcase name="And Verify title is &quot;Digital Bank&quot;" classname="Scenario: As a user, I want to login to Bank application successfully" time="0"/>
+  <testcase name="When user enters username and password" classname="Scenario: As a user, I want to login to Bank application successfully" time="0"/>
+  <testcase name="Then user successfully login to home page" classname="Scenario: As a user, I want to login to Bank application successfully" time="0"/>
+  <testcase name="Scenario: As a user, I want to login to Bank application successfully" classname="Scenario: As a user, I want to login to Bank application successfully" time="0.001"/>
+  <testcase name="Given User navigate to Digital Bank application login page" classname="Scenario: Error message validation for invalid password" time="0"/>
+  <testcase name="And Verify title is &quot;Digital Bank&quot;" classname="Scenario: Error message validation for invalid password" time="0"/>
+  <testcase name="When user enters username and password" classname="Scenario: Error message validation for invalid password" time="0.002"/>
+  <testcase name="Then user should see error message &quot;Invalid credentials or access not granted.&quot;" classname="Scenario: Error message validation for invalid password" time="0.001"/>
+  <testcase name="Scenario: Error message validation for invalid password" classname="Scenario: Error message validation for invalid password" time="0.002"/>
+  <testcase name="Given User navigate to Digital Bank application login page" classname="Scenario: Error message validation for invalid username" time="0"/>
+  <testcase name="And Verify title is &quot;Digital Bank&quot;" classname="Scenario: Error message validation for invalid username" time="0"/>
+  <testcase name="When user enters username and password" classname="Scenario: Error message validation for invalid username" time="0"/>
+  <testcase name="Then user should see error message &quot;Invalid credentials or access not granted.&quot;" classname="Scenario: Error message validation for invalid username" time="0"/>
+  <testcase name="Scenario: Error message validation for invalid username" classname="Scenario: Error message validation for invalid username" time="0"/>
+  <testcase name="Given User navigate to Digital Bank application login page" classname="Scenario: Error message validation for invalid credentials" time="0"/>
+  <testcase name="And Verify title is &quot;Digital Bank&quot;" classname="Scenario: Error message validation for invalid credentials" time="0"/>
+  <testcase name="When user enters username and password" classname="Scenario: Error message validation for invalid credentials" time="0"/>
+  <testcase name="Then user should see error message &quot;Invalid credentials or access not granted.&quot;" classname="Scenario: Error message validation for invalid credentials" time="0"/>
+  <testcase name="Scenario: Error message validation for invalid credentials" classname="Scenario: Error message validation for invalid credentials" time="0.001"/>
+  <testcase name="Given User navigate to Digital Bank application register page" classname="Scenario: as a user I want to register at Digital Bank application" time="0"/>
+  <testcase name="And Verify title is &quot;Digital Bank&quot;" classname="Scenario: as a user I want to register at Digital Bank application" time="0"/>
+  <testcase name="When user creates account with following fields" classname="Scenario: as a user I want to register at Digital Bank application" time="0"/>
+  <testcase name="Then user should see &quot;Registration successful. Please Login.&quot; message" classname="Scenario: as a user I want to register at Digital Bank application" time="0"/>
+  <testcase name="Scenario: as a user I want to register at Digital Bank application" classname="Scenario: as a user I want to register at Digital Bank application" time="0.001"/>
+  <testcase name="Given User navigate to Digital Bank application login page" classname="| password | JohnDoe@testemail.com | wrongPassword |" time="0"/>
+  <testcase name="And Verify title is &quot;Digital Bank&quot;" classname="| password | JohnDoe@testemail.com | wrongPassword |" time="0"/>
+  <testcase name="When user enters username and password" classname="| password | JohnDoe@testemail.com | wrongPassword |" time="0"/>
+  <testcase name="Then user should see error message &quot;Invalid credentials or access not granted.&quot;" classname="| password | JohnDoe@testemail.com | wrongPassword |" time="0"/>
+  <testcase name="| password | JohnDoe@testemail.com | wrongPassword |" classname="| password | JohnDoe@testemail.com | wrongPassword |" time="0.001"/>
+  <testcase name="Given User navigate to Digital Bank application login page" classname="| username | invalid@testemail.com | Password1 |" time="0"/>
+  <testcase name="And Verify title is &quot;Digital Bank&quot;" classname="| username | invalid@testemail.com | Password1 |" time="0"/>
+  <testcase name="When user enters username and password" classname="| username | invalid@testemail.com | Password1 |" time="0"/>
+  <testcase name="Then user should see error message &quot;Invalid credentials or access not granted.&quot;" classname="| username | invalid@testemail.com | Password1 |" time="0"/>
+  <testcase name="| username | invalid@testemail.com | Password1 |" classname="| username | invalid@testemail.com | Password1 |" time="0"/>
+  <testcase name="Given User navigate to Digital Bank application login page" classname="| credentials | invalidn@testemail.com | wrongPassword |" time="0"/>
+  <testcase name="And Verify title is &quot;Digital Bank&quot;" classname="| credentials | invalidn@testemail.com | wrongPassword |" time="0"/>
+  <testcase name="When user enters username and password" classname="| credentials | invalidn@testemail.com | wrongPassword |" time="0"/>
+  <testcase name="Then user should see error message &quot;Invalid credentials or access not granted.&quot;" classname="| credentials | invalidn@testemail.com | wrongPassword |" time="0"/>
+  <testcase name="| credentials | invalidn@testemail.com | wrongPassword |" classname="| credentials | invalidn@testemail.com | wrongPassword |" time="0"/>
+  <testcase name="Given User generate last name and first name" classname="Scenario: Customer info with java" time="0"/>
+  <testcase name="And User generate address info" classname="Scenario: Customer info with java" time="0"/>
+  <testcase name="Then Customer info should be printed" classname="Scenario: Customer info with java" time="0"/>
+  <testcase name="Scenario: Customer info with java" classname="Scenario: Customer info with java" time="0"/>
+  <testcase name="Given User generate last name and first name with JF" classname="Scenario: Customer info with java faker" time="0"/>
+  <testcase name="And User generate address info with JF" classname="Scenario: Customer info with java faker" time="0"/>
+  <testcase name="Then Customer info should be printed" classname="Scenario: Customer info with java faker" time="0"/>
+  <testcase name="Scenario: Customer info with java faker" classname="Scenario: Customer info with java faker" time="0"/>
+  <testcase name="Given user with &quot;john@gmail.com&quot; and password &quot;123pass&quot; is registered" classname="| john@gmail.com | 123pass | john@gmail.com | 123pass | HomePage |" time="0"/>
+  <testcase name="When user with &quot;john@gmail.com&quot; and &quot;123pass&quot; logs in" classname="| john@gmail.com | 123pass | john@gmail.com | 123pass | HomePage |" time="0"/>
+  <testcase name="Then user should see the &quot;HomePage&quot;" classname="| john@gmail.com | 123pass | john@gmail.com | 123pass | HomePage |" time="0"/>
+  <testcase name="| john@gmail.com | 123pass | john@gmail.com | 123pass | HomePage |" classname="| john@gmail.com | 123pass | john@gmail.com | 123pass | HomePage |" time="0.001"/>
+  <testcase name="Given user with &quot;john@gmail.com&quot; and password &quot;123pass&quot; is registered" classname="| john@gmail.com | 123pass | john@gmail.com | 12pass | password error page |" time="0"/>
+  <testcase name="When user with &quot;john@gmail.com&quot; and &quot;12pass&quot; logs in" classname="| john@gmail.com | 123pass | john@gmail.com | 12pass | password error page |" time="0"/>
+  <testcase name="Then user should see the &quot;password error page&quot;" classname="| john@gmail.com | 123pass | john@gmail.com | 12pass | password error page |" time="0"/>
+  <testcase name="| john@gmail.com | 123pass | john@gmail.com | 12pass | password error page |" classname="| john@gmail.com | 123pass | john@gmail.com | 12pass | password error page |" time="0"/>
+  <testcase name="Given user with &quot;john@gmail.com&quot; and password &quot;123pass&quot; is registered" classname="| john@gmail.com | 123pass | j@gmail.com | 123pass | no username error page |" time="0"/>
+  <testcase name="When user with &quot;j@gmail.com&quot; and &quot;123pass&quot; logs in" classname="| john@gmail.com | 123pass | j@gmail.com | 123pass | no username error page |" time="0"/>
+  <testcase name="Then user should see the &quot;no username error page&quot;" classname="| john@gmail.com | 123pass | j@gmail.com | 123pass | no username error page |" time="0"/>
+  <testcase name="| john@gmail.com | 123pass | j@gmail.com | 123pass | no username error page |" classname="| john@gmail.com | 123pass | j@gmail.com | 123pass | no username error page |" time="0.001"/>
+  <testcase name="Given user with &quot;john@gmail.com&quot; and password &quot;123pass&quot; is registered" classname="| john@gmail.com | 123pass | john@gmail.com |  | input password |" time="0"/>
+  <testcase name="When user with &quot;john@gmail.com&quot; and &quot;&quot; logs in" classname="| john@gmail.com | 123pass | john@gmail.com |  | input password |" time="0"/>
+  <testcase name="Then user should see the &quot;input password&quot;" classname="| john@gmail.com | 123pass | john@gmail.com |  | input password |" time="0"/>
+  <testcase name="| john@gmail.com | 123pass | john@gmail.com |  | input password |" classname="| john@gmail.com | 123pass | john@gmail.com |  | input password |" time="0"/>
+  <testcase name="And The following user account is created" classname="Scenario: Deposit within allowed range of Chase" time="0"/>
+  <testcase name="When User deposits $1000.00 to the account" classname="Scenario: Deposit within allowed range of Chase" time="0"/>
+  <testcase name="Then User should have $1000.00 in account" classname="Scenario: Deposit within allowed range of Chase" time="0"/>
+  <testcase name="Scenario: Deposit within allowed range of Chase" classname="Scenario: Deposit within allowed range of Chase" time="0"/>
+  <testcase name="Given the user accounts are created" classname="Scenario: Withdraw after opening account" time="0"/>
+  <testcase name="When the users withdraw" classname="Scenario: Withdraw after opening account" time="0"/>
+  <testcase name="Then the users have the following balances" classname="Scenario: Withdraw after opening account" time="0"/>
+  <testcase name="Scenario: Withdraw after opening account" classname="Scenario: Withdraw after opening account" time="0"/>
+</testsuite>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>Bank Smoke Test</td>
+                          <td>1</td>
+                        <td>30 Oct 2020, 23:03</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">BankOfAmericaSteps.accounts_have_the_following_balances(String,String>>)</td>
+                <td>2</td>
+                <td class="duration" data-value="1596000">001ms</td>
+                <td class="duration" data-value="798000">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">BankOfAmericaSteps.the_following_deposits_are_made(String,String>>)</td>
+                <td>2</td>
+                <td class="duration" data-value="239800">000ms</td>
+                <td class="duration" data-value="119900">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">BankOfAmericaSteps.the_following_user_account_is_created(String,Long>>)</td>
+                <td>3</td>
+                <td class="duration" data-value="109009900">109ms</td>
+                <td class="duration" data-value="36336633">036ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">BankOfAmericaWithdrawSteps.the_user_accounts_are_created(AccountDataHolder>)</td>
+                <td>1</td>
+                <td class="duration" data-value="9642800">009ms</td>
+                <td class="duration" data-value="9642800">009ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">BankOfAmericaWithdrawSteps.the_users_have_the_following_balances(BalanceCheckContainer>)</td>
+                <td>1</td>
+                <td class="duration" data-value="1147700">001ms</td>
+                <td class="duration" data-value="1147700">001ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">BankOfAmericaWithdrawSteps.the_users_withdraw(WithdrawDataContainer>)</td>
+                <td>1</td>
+                <td class="duration" data-value="1280000">001ms</td>
+                <td class="duration" data-value="1280000">001ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ChaseDepositStepDefs.check(double)</td>
+                <td>15</td>
+                <td class="duration" data-value="2446200">002ms</td>
+                <td class="duration" data-value="163080">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ChaseDepositStepDefs.create(long,long)</td>
+                <td>4</td>
+                <td class="duration" data-value="1161300">001ms</td>
+                <td class="duration" data-value="290325">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ChaseDepositStepDefs.createAccount(long,long)</td>
+                <td>9</td>
+                <td class="duration" data-value="3960200">003ms</td>
+                <td class="duration" data-value="440022">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ChaseDepositStepDefs.dep(double)</td>
+                <td>11</td>
+                <td class="duration" data-value="2324400">002ms</td>
+                <td class="duration" data-value="211309">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ChaseDepositStepDefs.user_deposits_$(double)</td>
+                <td>3</td>
+                <td class="duration" data-value="568900">000ms</td>
+                <td class="duration" data-value="189633">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ChaseDepositStepDefs.user_withdraws_$(double)</td>
+                <td>4</td>
+                <td class="duration" data-value="727700">000ms</td>
+                <td class="duration" data-value="181925">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">CucumberDemoSteps.john_Doe_Should_not_any_deposits()</td>
+                <td>1</td>
+                <td class="duration" data-value="60900">000ms</td>
+                <td class="duration" data-value="60900">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">CucumberDemoSteps.john_Doe_should_have_deposited(int)</td>
+                <td>1</td>
+                <td class="duration" data-value="145200">000ms</td>
+                <td class="duration" data-value="145200">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">CucumberDemoSteps.john_Doe_should_not_have_deposited(int)</td>
+                <td>1</td>
+                <td class="duration" data-value="156000">000ms</td>
+                <td class="duration" data-value="156000">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">CucumberDemoSteps.user_deposits_$_to_John_Doe(int)</td>
+                <td>2</td>
+                <td class="duration" data-value="339300">000ms</td>
+                <td class="duration" data-value="169650">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">CucumberDemoSteps.user_deposits_to_John_Doe(int)</td>
+                <td>1</td>
+                <td class="duration" data-value="80200">000ms</td>
+                <td class="duration" data-value="80200">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">CucumberDemoSteps.user_has_in_the_account(int)</td>
+                <td>1</td>
+                <td class="duration" data-value="103200">000ms</td>
+                <td class="duration" data-value="103200">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">CucumberDemoSteps.user_is_logged_in_to_chase_account()</td>
+                <td>3</td>
+                <td class="duration" data-value="263400">000ms</td>
+                <td class="duration" data-value="87800">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">CucumberDemoSteps.user_should_have(int)</td>
+                <td>1</td>
+                <td class="duration" data-value="123300">000ms</td>
+                <td class="duration" data-value="123300">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">DigitalBankSteps.user_creates_account_with_following_fields(DataTable)</td>
+                <td>1</td>
+                <td class="duration" data-value="34100">000ms</td>
+                <td class="duration" data-value="34100">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">DigitalBankSteps.user_enters_username_and_password(String>)</td>
+                <td>7</td>
+                <td class="duration" data-value="316300">000ms</td>
+                <td class="duration" data-value="45185">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">DigitalBankSteps.user_navigate_to_Digital_Bank_application_login_page()</td>
+                <td>7</td>
+                <td class="duration" data-value="997900">000ms</td>
+                <td class="duration" data-value="142557">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">DigitalBankSteps.user_navigate_to_Digital_Bank_application_register_page()</td>
+                <td>1</td>
+                <td class="duration" data-value="117600">000ms</td>
+                <td class="duration" data-value="117600">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">DigitalBankSteps.user_should_see_error_message(String)</td>
+                <td>6</td>
+                <td class="duration" data-value="497800">000ms</td>
+                <td class="duration" data-value="82966">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">DigitalBankSteps.user_should_see_message(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="124100">000ms</td>
+                <td class="duration" data-value="124100">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">DigitalBankSteps.user_successfully_login_to_home_page()</td>
+                <td>1</td>
+                <td class="duration" data-value="51600">000ms</td>
+                <td class="duration" data-value="51600">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">DigitalBankSteps.verify_title_is(String)</td>
+                <td>8</td>
+                <td class="duration" data-value="811300">000ms</td>
+                <td class="duration" data-value="101412">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Hooks.afterHook()</td>
+                <td>35</td>
+                <td class="duration" data-value="1750400">001ms</td>
+                <td class="duration" data-value="50011">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Hooks.beforeHook()</td>
+                <td>35</td>
+                <td class="duration" data-value="1446700">001ms</td>
+                <td class="duration" data-value="41334">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Hooks.beforeSmoke()</td>
+                <td>1</td>
+                <td class="duration" data-value="178600">000ms</td>
+                <td class="duration" data-value="178600">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Hooks.onceBeforeAllTests()</td>
+                <td>35</td>
+                <td class="duration" data-value="1742700">001ms</td>
+                <td class="duration" data-value="49791">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">JavaFSteps.customer_info_should_be_printed()</td>
+                <td>2</td>
+                <td class="duration" data-value="68300">000ms</td>
+                <td class="duration" data-value="34150">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">JavaFSteps.user_generate_address_info()</td>
+                <td>1</td>
+                <td class="duration" data-value="17800">000ms</td>
+                <td class="duration" data-value="17800">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">JavaFSteps.user_generate_address_info_with_JF()</td>
+                <td>1</td>
+                <td class="duration" data-value="24554800">024ms</td>
+                <td class="duration" data-value="24554800">024ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">JavaFSteps.user_generate_last_name_and_first_name()</td>
+                <td>1</td>
+                <td class="duration" data-value="23884400">023ms</td>
+                <td class="duration" data-value="23884400">023ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">JavaFSteps.user_generate_last_name_and_first_name_with_JF()</td>
+                <td>1</td>
+                <td class="duration" data-value="121388500">121ms</td>
+                <td class="duration" data-value="121388500">121ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ScenarioOutlineSteps.user_should_see_the(String)</td>
+                <td>4</td>
+                <td class="duration" data-value="270400">000ms</td>
+                <td class="duration" data-value="67600">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ScenarioOutlineSteps.user_with_and_logs_in(String,String)</td>
+                <td>4</td>
+                <td class="duration" data-value="315000">000ms</td>
+                <td class="duration" data-value="78750">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ScenarioOutlineSteps.user_with_and_password_is_registered(String,String)</td>
+                <td>4</td>
+                <td class="duration" data-value="905200">000ms</td>
+                <td class="duration" data-value="226300">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">TableChaseDepositSteps.the_following_user_account_is_created(String,Long>>)</td>
+                <td>1</td>
+                <td class="duration" data-value="305100">000ms</td>
+                <td class="duration" data-value="305100">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">TableChaseDepositSteps.user_deposits_$_to_the_account(double)</td>
+                <td>1</td>
+                <td class="duration" data-value="112900">000ms</td>
+                <td class="duration" data-value="112900">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>42</td>
+              <td>225</td>
+              <td class="duration">315ms</td>
+              <td class="duration">001ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 24,
+        "name": "Verification of search results with \"Free shipping\" checkbox checked",
+        "description": "",
+        "id": "amazon-search;verification-of-search-results-with-\"free-shipping\"-checkbox-checked",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 25,
+            "name": "go to amazon.com",
+            "match": {
+              "location": "AmazonSearchSteps.go_to_amazon_com()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 26,
+            "name": "enter search term \"Selenium book\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Selenium book",
+                  "offset": 19
+                }
+              ],
+              "location": "AmazonSearchSteps.enter_search_term(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 27,
+            "name": "click Search button",
+            "match": {
+              "location": "AmazonSearchSteps.click_Search_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "verify free shipping checkbox is not selected",
+            "match": {
+              "location": "AmazonSearchSteps.verify_free_shipping_checkbox_is_not_selected()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 29,
+            "name": "check free shipping checkbox",
+            "match": {
+              "location": "AmazonSearchSteps.check_free_shipping_checkbox()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 30,
+            "name": "verify top five results are still the same",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 23,
+            "name": "@search_one"
+          }
+        ]
+      }
+    ],
+    "name": "Amazon Search",
+    "description": "\r\nVerify all search amazon functionalities",
+    "id": "amazon-search",
+    "keyword": "Feature",
+    "uri": "features/amazon/AmazonSearch.feature"
+  }
+]
